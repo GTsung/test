@@ -1,5 +1,6 @@
 package com.gradle.demo.controller;
 
+import com.gradle.demo.common.PrintLogAnn;
 import com.gradle.demo.domain.User;
 import com.gradle.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping(value = "user/getList")
+    @PrintLogAnn(printReturnLog = true)
     public List<User> getUserList(){
         return userService.getUserList();
     }
