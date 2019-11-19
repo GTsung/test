@@ -23,6 +23,7 @@ public class UserController {
         return userService.getUserList();
     }
 
+    //specify
     @PostMapping(value = "user/add")
     public boolean addUser(@RequestBody User user) {
         return userService.addUser(user);
