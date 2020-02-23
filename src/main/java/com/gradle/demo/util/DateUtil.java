@@ -68,6 +68,10 @@ public class DateUtil {
 
     }
 
+    private static void test(){
+
+    }
+
     private static String calSumTime(Date start, Date end) {
         return String.format("%d H %d m",
                 calcHourOffSet(start, end)
