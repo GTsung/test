@@ -57,6 +57,7 @@ public class ByteArrayInputStreamTest {
         byteArray.skip(5); // 跳过五个字节
 
         byte[] buf = new byte[LEN];
+        // read(byte[], offset, len);将流中内容写入byte数组
         byteArray.read(buf, 0 , LEN);
         String s1 = new String(buf);
         System.out.printf("s1=%s\n", s1); // klmno
