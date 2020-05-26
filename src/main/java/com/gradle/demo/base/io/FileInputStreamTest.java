@@ -19,6 +19,7 @@ public class FileInputStreamTest {
     public static void main(String[] args) throws Exception {
         testWrite();
         testRead();
+        copyTest();
     }
 
     private static void testWrite() throws IOException {
@@ -56,5 +57,25 @@ public class FileInputStreamTest {
         in.close();
         in2.close();
         inputStream.close();
+    }
+
+    private static void copyTest() throws IOException {
+        InputStream in = new FileInputStream("file.txt");
+        OutputStream out = new FileOutputStream("file2.txt");
+        BufferedInputStream bin = new BufferedInputStream(in);
+        BufferedOutputStream bou = new BufferedOutputStream(out);
+
+        byte[] bytes = new byte[1024];
+
+        int i;
+        while((i=bin.read(bytes))!=-1){
+            bou.write(bytes,0,i);
+        }
+        // 先关闭高级流
+        bin.close();
+        bou.close();
+        in.close();
+        out.close();
+
     }
 }
