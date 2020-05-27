@@ -21,8 +21,8 @@ public class PipedInputStreamTest {
         inputStream.connect(outputStream);
 //        outputStream.connect(inputStream);
 
-        sender.run(); // 开始写入
-        receive.run(); // 将输出流写入的数据接收并读出
+        sender.start(); // 开始写入
+        receive.start(); // 将输出流写入的数据接收并读出
     }
 
 }
