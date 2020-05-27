@@ -44,7 +44,7 @@ public class Receive extends Thread {
                 int len = pipedInputStream.read(buf);
                 totle += len;
                 System.out.println(new String(buf, 0 , len));
-                // 若读取字节长度超过1024则退出
+                // 若读取字节长度超过1024则退出，输出流最长输出1046个长度
                 if (totle > 1024) {
                     break;
                 }
