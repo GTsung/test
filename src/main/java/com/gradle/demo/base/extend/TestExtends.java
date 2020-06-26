@@ -18,5 +18,7 @@ public class TestExtends {
         Manager manager = new Manager();
 
         Object obj = null;
+
+        Integer i = null;
     }
 }
